@@ -33,3 +33,16 @@ var About = React.createClass({
 
 module.exports = About;
 
+
+/*
+ * Increased readability in JSX syntax
+ */
+
+var React = require('React');
+
+var message =
+  <div class="hello" onClick={someFunc}>
+    <span>Hello, world!</span>
+  </div>;
+
+React.renderComponent(message, document.body);
