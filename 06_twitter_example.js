@@ -155,6 +155,12 @@ module.exports = TweetsApp = React.createClass({
  * In public/Tweets.react.js (sub-component of TweetsApp.react)
  */
 
+var React = require('react');
+var Tweet = require('./Tweet.react.js');
+var ListGroup = require('react-bootstrap').ListGroup;
+var ReactTransitionGroup = React.addons.CSSTransitionGroup; // animated transition of component
+
+module.exports = Tweets = React.createClass({
   render: function() {
     // Build list items of single tweet components using map
     var content = this.props.tweets.map(function(tweet) {
@@ -182,6 +188,8 @@ module.exports = TweetsApp = React.createClass({
     )
   }
 
+});
+
 /*
  * In public/routes.js
  */
@@ -204,3 +212,13 @@ module.exports = TweetsApp = React.createClass({
       state: JSON.stringify(tweets)
     })
   }
+
+
+/*
+ * In CSS for ReactTransitionGroup transitionName="example" animation
+ */
+
+.example-enter { opacity: 0.01; transform: translate(100%, 0); }
+.example-enter.example-enter-active { opacity: 1; transform: translate(0,0); transition: transform .5s ease-in; }
+.example-leave { opacity: 1; transition: opacity .5s ease-in; }
+.example-leave.example-leave-active { opacity: 0.01; }

@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="06_twitter_example.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="06_twitter_example.js" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Documents/Projects/react_basics/06_twitter_example.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.7733599">
-              <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+            <state vertical-scroll-proportion="-8.384615">
+              <caret line="207" column="24" selection-start-line="207" selection-start-column="24" selection-end-line="207" selection-end-column="24" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -73,9 +73,21 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.642858">
-              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+            <state vertical-scroll-proportion="-4.821429">
+              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="07_router.js" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Documents/Projects/react_basics/07_router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.56710774">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,10 +110,11 @@
         <option value="$USER_HOME$/Documents/Projects/react_basics/05_event.js" />
         <option value="$USER_HOME$/Documents/Projects/react_basics/06_twitter.js" />
         <option value="$USER_HOME$/Documents/Projects/react_basics/01_component.js" />
-        <option value="$USER_HOME$/Documents/Projects/react_basics/README.md" />
-        <option value="$USER_HOME$/Documents/Projects/react_basics/06_twitter_example.js" />
         <option value="$USER_HOME$/Documents/Projects/react_basics/02_mount.js" />
         <option value="$USER_HOME$/Documents/Projects/react_basics/04_state.js" />
+        <option value="$USER_HOME$/Documents/Projects/react_basics/06_twitter_example.js" />
+        <option value="$USER_HOME$/Documents/Projects/react_basics/README.md" />
+        <option value="$USER_HOME$/Documents/Projects/react_basics/07_router.js" />
       </list>
     </option>
   </component>
@@ -113,9 +126,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="486" />
+    <option name="x" value="384" />
     <option name="y" value="43" />
-    <option name="width" value="781" />
+    <option name="width" value="883" />
     <option name="height" value="646" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -215,10 +228,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="486" y="43" width="781" height="646" extended-state="0" />
-    <editor active="true" />
+    <frame x="384" y="43" width="883" height="646" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21113689" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -245,17 +258,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Documents/Projects/react_basics/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.642858">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/Projects/react_basics/05_event.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -306,8 +308,29 @@
     </entry>
     <entry file="file://$USER_HOME$/Documents/Projects/react_basics/06_twitter_example.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7733599">
-          <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+        <state vertical-scroll-proportion="-8.384615">
+          <caret line="207" column="24" selection-start-line="207" selection-start-column="24" selection-end-line="207" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Projects/react_basics/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.821429">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Projects/react_basics/07_router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56710774">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

@@ -7,7 +7,7 @@
 * React components use className, instead of class attribute. Read more at [JSX Gotchas].
 * Word 'component' is hard to type.
 * JSX tag name convention has lowercase built-in components and [capitalized custom components].
-* ARIA-attributes are rendered properly.
+* As an exception, ARIA-attributes (custom HTML attributes) are rendered properly.
 
 ### Dependencies
  * isomorphic-hot-loader
