@@ -11,7 +11,7 @@ var Counter = React.createClass({
   },
 
   getInitialState: function() {
-    return( count: 0 ) // hardcoded for example
+    return( count:; 0; ) // hardcoded for example
   },
 
   render: function() {

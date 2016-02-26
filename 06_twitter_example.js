@@ -45,10 +45,32 @@ module.exports = TweetsApp = React.createClass({
     ...
   },
 
+  // Set the initial component state
+  getInitialState: function(props) {
+    props = props || this.props;
+
+    this tweetData.updated = props.tweets;
+
+    // Set initial state using props
+    return {
+      tweets: props.tweets, // top-level component
+      count: 0,
+      page: 0,
+      done: false,
+      announcement: "Send an announcement to your users!"
+    };
+
+  },
+
   displayNewTweets: function() {
-    if (this.tweetData.newTweetsAvail) {
-      this.tweetsData.newTweetsAvail = false;
-      ...
+    if (this.tweetData.newTweetsAvail) { // only if there is a new tweet
+      this.tweetData.newTweetsAvail = false;
+      this.setState({ // update the state of the component
+        tweets: this.tweetData.updated, // goes into render function of Tweets.react.js and inject the component into the virtual DOM
+        count: this.tweetData.count,
+        skip: this.tweetData.skip,
+        announcement: this.tweetData.announcement
+      });
     }
   },
 
@@ -93,6 +115,25 @@ module.exports = TweetsApp = React.createClass({
     }
   },
 
+  // Called directly after component rendering, only on client
+  componentDidMount: function() {
+    // Preserve self reference
+    var self = this;
+    // Initialize socket.io
+    var socket = io.connect();
+    // Upon tweet event emission
+    socket.on('tweet', function(data){
+      // Add a tweet to queue
+      self.addTweet(data);
+    });
+
+    socket.on('announce', function(data){
+      self.tweetData.announcement = data;
+      self.tweetData.newTweetsAvail = true;
+      self.displayNewTweets();
+    })
+  },
+
   // Render the component
   render: function() {
     return (
@@ -101,7 +142,7 @@ module.exports = TweetsApp = React.createClass({
           <Col xs={12} className="small-padding-panel">
             <Panel className = "small-padding-panel">
               <img src="#" className="center-block" />
-              <AnnounceBar announcement={this.state.announcement} />
+              <AnnounceBar announcement={this.state.announcement} /> // TweetsApp component is passed to Tweets sub-component
             </Panel>
           </Col>
         </Row>
@@ -109,3 +150,57 @@ module.exports = TweetsApp = React.createClass({
   }
 
 });
+
+/*
+ * In public/Tweets.react.js (sub-component of TweetsApp.react)
+ */
+
+  render: function() {
+    // Build list items of single tweet components using map
+    var content = this.props.tweets.map(function(tweet) {
+      return (
+        <Tweet key={tweet._id} tweet={tweet} />
+      )
+    });
+
+    // Return ul filled with our mapped tweets
+    return (
+      <ListGroup>
+        <ReactTransitionGroup transitionName="example">
+          {content}
+        </ReactTransitionGroup>
+      </ListGroup>
+    );
+
+    ...
+
+    var imgUrl = tweet.avatar;
+    imgUrl = imgUrl.replace(/normal/, "bigger");
+    counter++;
+    return(
+      <ListGroupItem className={bgColor}>
+    )
+  }
+
+/*
+ * In public/routes.js
+ */
+
+  index: function() {
+
+    // Render React to a string, passing in fetched tweets
+    var MyComponent = React.createFactory(TweetsApp);
+    var markup = React.renderToString( // send string to server in order to optimize page load
+      MyComponent({
+        tweets: tweets // database to collect the tweets
+      })
+    );
+
+    // Render 'home' template
+    res.render('home', {
+      // Pass rendered react markup
+      markup: markup,
+      // Pass current state to client side
+      state: JSON.stringify(tweets)
+    })
+  }

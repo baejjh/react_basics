@@ -40,6 +40,6 @@ module.exports = Home;
 
 /*
  * componentWillRender
- * componentDidMount
+ * componentDidMount - Continue to additional function after a component is mounted (callback?)
  * componentWillUnmount - Make change and reviews it from the HTML
  */

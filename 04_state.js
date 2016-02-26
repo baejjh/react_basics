@@ -6,7 +6,7 @@
 
 var MyComponent = React.createClass({
   getInitialState: function() {
-    return { count: 5 } // generally a number that is passed
+    return { count: 5 }; // generally a number that is passed
   },
   render: function() {
     return(
@@ -14,3 +14,5 @@ var MyComponent = React.createClass({
     )
   }
 });
+
+// setState - Invokes render() for all components and its sub-components; thanks to the virtual DOM, it is not slow.
